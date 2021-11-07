@@ -31,9 +31,14 @@ fn main() {
         dst.join("lib").join("pkgconfig").display()
     );
 
-    println!(
-        "cargo:rustc-link-search=native={}",
-        dst.join("build").join("MinSizeRel").display()
-    );
+    println!("cargo:rustc-link-search=native={}", {
+        let dst = dst.join("build");
+        if cfg!(windows) {
+            dst.join("MinSizeRel")
+        } else {
+            dst
+        }
+        .display()
+    });
     println!("cargo:rustc-link-lib=static=aom");
 }

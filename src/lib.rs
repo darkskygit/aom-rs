@@ -1,7 +1,7 @@
 #![allow(non_upper_case_globals)]
 
-extern crate libaom_sys as ffi;
 extern crate av_data as data;
+extern crate libaom_sys as ffi;
 
 #[cfg(feature = "codec-trait")]
 extern crate av_codec as codec;

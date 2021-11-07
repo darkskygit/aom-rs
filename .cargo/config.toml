@@ -1,0 +1,18 @@
+[build]
+rustflags = [
+    "-Ctarget-cpu=haswell",
+    "-Ctarget-feature=-bmi,-bmi2,-avx2",
+    "-Cembed-bitcode=yes",
+    "-Zunstable-options"
+]
+
+[target.x86_64-pc-windows-msvc]
+rustflags = [
+    "-Ctarget-feature=+crt-static",
+    "-Clink-arg=/LTCG",
+    "-Clink-arg=/OPT:REF",
+    "-Ctarget-cpu=haswell",
+    "-Ctarget-feature=-bmi,-bmi2,-avx2",
+    "-Cembed-bitcode=yes",
+    "-Zunstable-options"
+]

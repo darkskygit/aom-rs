@@ -426,8 +426,8 @@ pub(crate) mod tests {
         c.cfg.rc_min_quantizer = 0;
         c.cfg.rc_min_quantizer = 0;
         c.cfg.g_threads = 4;
-        c.cfg.g_pass = aom_enc_pass::AOM_RC_ONE_PASS;
-        c.cfg.rc_end_usage = aom_rc_mode::AOM_CQ;
+        c.cfg.g_pass = AOM_RC_ONE_PASS;
+        c.cfg.rc_end_usage = AOM_CQ;
 
         let mut enc = c.get_encoder().unwrap();
 

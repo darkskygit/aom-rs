@@ -6,7 +6,7 @@ license = "MIT"
 description = "libaom bindings"
 repository = "https://github.com/rust-av/aom-rs"
 readme = "README.md"
-keywords = ["libaom","av1"]
+keywords = ["libaom", "av1"]
 
 [features]
 default = ["codec-trait"]
@@ -21,4 +21,4 @@ av-codec = { version = "0.2.2", optional = true }
 members = ["libaom-sys"]
 
 [dev-dependencies]
-regex ="1.5.4"
+regex = "1.5.4"

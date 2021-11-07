@@ -1,4 +1,4 @@
 [submodule "libaom-sys/vendor"]
 	path = libaom-sys/vendor
 	url = https://github.com/darkskygit/libaom
-	branch = ffmpeg4.2.0
+	branch = 4.2.0
