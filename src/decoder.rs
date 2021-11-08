@@ -10,8 +10,7 @@ use std::ptr;
 use std::sync::Arc;
 
 use crate::common::AOMCodec;
-use crate::data::frame::{new_default_frame, FrameType};
-use crate::data::frame::{Frame, VideoInfo};
+use crate::data::frame::{Frame, FrameBufferCopy, FrameType, VideoInfo};
 use crate::data::pixel::formats::YUV420;
 
 fn frame_from_img(img: aom_image_t) -> Frame {
@@ -32,7 +31,7 @@ fn frame_from_img(img: aom_image_t) -> Frame {
         Arc::new(*f),
     );
 
-    let mut f = new_default_frame(v, None);
+    let mut f = Frame::new_default_frame(v, None);
 
     let src = img
         .planes

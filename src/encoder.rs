@@ -450,7 +450,7 @@ pub(crate) mod tests {
             Arc::new(*formats::YUV420),
         );
 
-        new_default_frame(v, Some(t.clone()))
+        Frame::new_default_frame(v, Some(t.clone()))
     }
 
     #[test]

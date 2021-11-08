@@ -14,8 +14,8 @@ codec-trait = ["av-codec"]
 
 [dependencies]
 libaom-sys = { version = "0.12.0", path = "libaom-sys" }
-av-data = { version = "0.3.0" }
-av-codec = { version = "0.2.2", optional = true }
+av-data = { version = "0.3.0", path = "./av-data" }
+av-codec = { version = "0.2.2", path = "./av-codec", optional = true }
 
 [workspace]
 members = ["libaom-sys"]
